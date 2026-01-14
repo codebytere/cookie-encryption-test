@@ -36,7 +36,7 @@ flipFuses(appPath, {
   } else if (targetPlatform === 'win32') {
     console.log('  npm run test-packaged-win');
   } else {
-    console.log('  ./dist/cookie-encryption-fuse-test-linux-x64/cookie-encryption-fuse-test');
+    console.log('  npm run test-packaged-linux');
   }
 }).catch((err) => {
   console.error('Error flipping fuses:', err);

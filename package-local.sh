@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # Path to your local Electron build
-ELECTRON_APP="${ELECTRON_APP:-/Users/khammond/dev/electron/src/out/Testing/Electron.app}"
+ELECTRON_APP="${ELECTRON_APP:-/path/to/electron/src/out/Testing/Electron.app}"
 DIST_APP="dist/cookie-encryption-fuse-test-darwin-arm64/cookie-encryption-fuse-test.app"
 
 if [ ! -d "$ELECTRON_APP" ]; then

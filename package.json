@@ -7,8 +7,11 @@
     "package-mac-local": "./package-local.sh",
     "package-win": "electron-packager . --platform=win32 --arch=x64 --out=dist --overwrite && node flip-fuse.js win32",
     "package-win-local": "package-local.bat",
+    "package-linux": "electron-packager . --platform=linux --arch=x64 --out=dist --overwrite && node flip-fuse.js linux",
+    "package-linux-local": "./package-local-linux.sh",
     "test-packaged-mac": "open dist/cookie-encryption-fuse-test-darwin-arm64/cookie-encryption-fuse-test.app",
-    "test-packaged-win": ".\\dist\\cookie-encryption-fuse-test-win32-x64\\cookie-encryption-fuse-test.exe"
+    "test-packaged-win": ".\\dist\\cookie-encryption-fuse-test-win32-x64\\cookie-encryption-fuse-test.exe",
+    "test-packaged-linux": "./dist/cookie-encryption-fuse-test-linux-x64/cookie-encryption-fuse-test"
   },
   "devDependencies": {
     "@electron/fuses": "^1.8.0",
