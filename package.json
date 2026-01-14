@@ -1,0 +1,18 @@
+{
+  "name": "cookie-encryption-fuse-test",
+  "version": "1.0.0",
+  "main": "main.js",
+  "scripts": {
+    "package-mac": "electron-packager . --platform=darwin --arch=arm64 --out=dist --overwrite && node flip-fuse.js darwin && codesign --deep --force --sign - dist/cookie-encryption-fuse-test-darwin-arm64/cookie-encryption-fuse-test.app",
+    "package-mac-local": "./package-local.sh",
+    "package-win": "electron-packager . --platform=win32 --arch=x64 --out=dist --overwrite && node flip-fuse.js win32",
+    "package-win-local": "package-local.bat",
+    "test-packaged-mac": "open dist/cookie-encryption-fuse-test-darwin-arm64/cookie-encryption-fuse-test.app",
+    "test-packaged-win": ".\\dist\\cookie-encryption-fuse-test-win32-x64\\cookie-encryption-fuse-test.exe"
+  },
+  "devDependencies": {
+    "@electron/fuses": "^1.8.0",
+    "@electron/packager": "^18.3.0",
+    "electron": "40.0.0-beta.5"
+  }
+}
