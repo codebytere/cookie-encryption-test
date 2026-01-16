@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html>
+
 <head>
   <meta charset="UTF-8">
   <title>Cookie Encryption Fuse Test</title>
@@ -10,28 +11,117 @@
       text-align: center;
       background: #1a1a1a;
       color: #e5e5e5;
+      max-width: 900px;
+      margin: 0 auto;
     }
-    h1 { font-size: 24px; color: #fff; }
-    #status { font-size: 32px; margin: 30px 0; color: #fbbf24; }
-    .info { color: #a3a3a3; margin: 10px 0; }
-    .info span { color: #60a5fa; }
-    .success-msg {
+
+    h1 {
+      font-size: 28px;
+      color: #fff;
+      margin-bottom: 20px;
+    }
+
+    #status {
+      font-size: 36px;
+      margin: 30px 0;
+      color: #fbbf24;
+      font-weight: bold;
+    }
+
+    .info {
+      color: #a3a3a3;
+      margin: 10px 0;
+      font-size: 14px;
+    }
+
+    .info span {
+      color: #60a5fa;
+      font-weight: 500;
+    }
+
+    #results {
+      margin-top: 40px;
+      text-align: left;
+    }
+
+    .test-success,
+    .test-failure {
+      padding: 30px;
+      border-radius: 12px;
+      background: #166534;
+      color: #dcfce7;
+    }
+
+    .test-failure {
+      background: #7f1d1d;
+      color: #fecaca;
+    }
+
+    .test-success h3,
+    .test-failure h3 {
+      margin-top: 0;
+      font-size: 20px;
+      margin-bottom: 20px;
+    }
+
+    .test-success h4 {
+      margin-top: 25px;
+      margin-bottom: 10px;
+      font-size: 16px;
+      color: #bbf7d0;
+    }
+
+    .test-success p {
+      margin: 12px 0;
+      font-size: 15px;
+    }
+
+    .test-success ul {
+      margin: 10px 0;
+      padding-left: 25px;
+    }
+
+    .test-success li {
+      margin: 8px 0;
+      font-size: 14px;
+      font-family: 'Monaco', 'Courier New', monospace;
+    }
+
+    .test-success strong {
+      color: #86efac;
+    }
+
+    .note {
       margin-top: 30px;
       padding: 20px;
-      background: #166534;
+      background: #334155;
       border-radius: 8px;
-      color: #bbf7d0;
+      color: #cbd5e1;
+      font-size: 13px;
+      text-align: left;
     }
   </style>
 </head>
+
 <body>
-  <h1>🔐 Cookie Encryption Fuse Test</h1>
+  <h1>🔐 Cookie Encryption Functionality Test</h1>
   <div id="status">Loading...</div>
   <div class="info">Electron: <span id="version">-</span></div>
   <div class="info">Platform: <span id="platform">-</span></div>
-  <div class="success-msg">
-    If you see this, the app started successfully with cookie encryption enabled.
+
+  <div id="results"></div>
+
+  <div class="note">
+    <strong>What this test does:</strong><br>
+    • Sets encrypted cookies using the Electron session API<br>
+    • Retrieves the cookies to verify they're stored correctly<br>
+    • Validates cookie values match what was set<br>
+    • Checks for the presence of the encrypted Cookies database file<br>
+    <br>
+    Check the console logs for detailed test output.
   </div>
+
   <script src="renderer.js"></script>
 </body>
+
 </html>
